@@ -1,5 +1,4 @@
 <?php
-include __DIR__ . '/helper.php';
 include __DIR__ . '/header-functions.php';
 include __DIR__ . '/footer-functions.php';
 
