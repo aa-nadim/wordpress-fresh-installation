@@ -15,7 +15,7 @@ final class Loader{
     }
 
     public function globals(){
-        // $GLOBALS['citykid'] = new Helpers();
+        
     }
 
 }
