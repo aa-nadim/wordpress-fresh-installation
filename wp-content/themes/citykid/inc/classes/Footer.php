@@ -291,7 +291,6 @@ final class Footer{
             ) 
         );
 
-		$this->add_partials($wp_customize);
 	}
 
 
