@@ -2,7 +2,6 @@
 global $citykid; 
 if($citykid->meta['disable_header']) return; 
 
-$display_search_icon = get_theme_mod('enable_header_search', true);
 ?>
 <header <?php citykid_header_class(); ?>>
   
@@ -49,16 +48,3 @@ $display_search_icon = get_theme_mod('enable_header_search', true);
     </div>
 </header>
 
-<?php if($display_search_icon): ?>
-  <?php $placeholder_text = get_theme_mod('header_search_placeholder', 'Search and enter') ?>
-<div class="offcanvas offcanvas-search offcanvas-top top-0 px-4" tabindex="-1" id="offcanvassearch" aria-labelledby="offcanvasSearchLabel">
-
-  <button type="button" class="btn-close position-absolute end-0" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-  
-  <div class="offcanvas-body container overflow-hidden">
-    <form method="get" id="searchform" class="search-form searchform" action="<?php echo esc_url( home_url( '/' ) ); ?>">
-        <input type="search" class="form-control border-0 fs-3"  name="s" id="s" placeholder="<?php echo esc_attr($placeholder_text) ?>" value="<?php echo get_search_query(); ?>">   
-    </form>
-  </div>
-</div>
-<?php endif ?>

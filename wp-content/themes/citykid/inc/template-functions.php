@@ -3,7 +3,6 @@ include __DIR__ . '/helper.php';
 include __DIR__ . '/plugins.php';
 include __DIR__ . '/header-functions.php';
 include __DIR__ . '/footer-functions.php';
-include __DIR__ . '/template-tags.php';
 
 add_action('wp_enqueue_scripts', 'citykid_enqueue_assets');
 if (!function_exists('citykid_enqueue_assets')) {
@@ -130,18 +129,6 @@ function citykid_header_menu()
 
 
 
-/**
- * Add a pingback url auto-discovery header for single posts, pages, or attachments.
- *
- * @return void
- */
-function citykid_pingback_header()
-{
-	if (is_singular() && pings_open()) {
-		echo '<link rel="pingback" href="', esc_url(get_bloginfo('pingback_url')), '">';
-	}
-}
-add_action('wp_head', 'citykid_pingback_header');
 
 /**
  * Remove the `no-js` class from body if JS is supported.
@@ -238,32 +225,9 @@ function citykid_excerpt_more()
 // Filter the excerpt more link.
 add_filter('excerpt_more', 'citykid_excerpt_more');
 
-/**
- * Creates the continue reading link.
- */
-function citykid_the_content_more_link()
-{
-	if (!is_admin()) {
-		return '<div class="more-link-container">' . citykid_continue_reading_link() . '</div>';
-	}
-}
 
-// Filter the content more link.
-add_filter('the_content_more_link', 'citykid_the_content_more_link');
 
-if (!function_exists('citykid_post_title')) {
-	/**
-	 * Adds a title to posts and pages that are missing titles.
-	 *
-	 * @param 	string 	$title The title.
-	 * @return 	string
-	 */
-	function citykid_post_title($title)
-	{
-		return '' === $title ? esc_html_x('Untitled', 'Added to posts and pages that are missing titles', 'citykid') : $title;
-	}
-}
-add_filter('the_title', 'citykid_post_title');
+
 
 
 
