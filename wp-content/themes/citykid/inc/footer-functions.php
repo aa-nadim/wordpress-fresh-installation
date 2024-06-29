@@ -3,7 +3,6 @@
 control footer
 */
 
-
 /**
  * Retrieves an array of the class names for the footer element.
  *

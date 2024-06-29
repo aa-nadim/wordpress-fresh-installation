@@ -1,10 +1,4 @@
 <?php
-define( 'CITYKID_VERSION', '1.0.4' ); 
-define( 'CITYKID_URI', get_template_directory_uri() );
-define( 'CITYKID_DIR', get_template_directory() );
-define( 'CITYKID_ASSETS', CITYKID_URI.'/assets' );
-define( 'CITYKID_ADMIN_ASSETS', CITYKID_URI.'/assets/admin' );
-
 include __DIR__ .'/vendor/autoload.php';
 
 new Citykid\Loader();
@@ -152,7 +146,6 @@ if ( ! function_exists( 'citykid_after_setup_theme' ) ) {
 
 		// Add support for editor styles.
 		add_theme_support( 'editor-styles' );
-		$editor_stylesheet_path = './assets/css/editor-style.css';
 
 
 
