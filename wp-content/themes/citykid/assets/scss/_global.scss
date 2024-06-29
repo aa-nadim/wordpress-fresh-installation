@@ -1,0 +1,68 @@
+@mixin list-arrow { 
+    --#{$prefix}link-color: var(--#{$prefix}headings-color);
+    --#{$prefix}link-hover-color: var(--#{$prefix}primary);   
+    --citykid-link-decoration: none;
+	--citykid-link-hover-decoration: none;
+    padding-left: 0;   
+    list-style: none;
+    > li{
+        &:before{
+            content: "\e90a";
+            font-family: "citykid";
+            font-size: 14px;
+            color: var(--#{$prefix}list-icon-color);
+            margin-right: 5px;
+        }
+    }    
+}
+
+@mixin list-grid { 
+    --#{$prefix}link-color: var(--#{$prefix}headings-color);
+    --#{$prefix}link-hover-color: var(--#{$prefix}primary);   
+    --citykid-link-decoration: none;
+	--citykid-link-hover-decoration: none;
+    padding-left: 0;   
+    display: grid;
+    row-gap: var(--#{$prefix}list-gap, 20px);
+    list-style: none;  
+    > li{
+        margin-bottom: 0;
+    }
+    .wp-block-latest-posts__post-author,   
+    time{
+        font-size: #{$font-size-sm};
+        color: #{$text-muted};
+    }
+    .alignleft{
+        margin-bottom: 0;
+    }
+}
+
+@mixin list-arrow-link {    
+    padding-left: 0;
+    display: grid;
+    row-gap: var(--#{$prefix}list-gap, 20px);
+    --citykid-link-decoration: none;
+	--citykid-link-hover-decoration: none;
+    list-style: none;
+    > li:not(.recentcomments){
+        ul{
+            margin-bottom: 0;
+            display: grid;
+            row-gap: 10px;
+
+            ul ul{
+                padding-left: 0;
+            }
+        }
+        > a{
+            &:before{
+                content: "\e90a";
+                font-family: "citykid";
+                font-size: 14px;
+                color: var(--#{$prefix}list-icon-color);
+                margin-right: 5px;
+            }
+        }
+    }    
+}

@@ -1,0 +1,19 @@
+#side-sortables{
+    .image_select-wrapper{
+        .rwmb-input{
+            display: flex;
+            gap: 5px;
+            flex-wrap: nowrap;
+        }
+    }
+    .rwmb-image-select{
+        width: 60px;
+        height: auto;
+        display: inline-flex;
+        margin: 0;
+        float: none;
+        img{
+            height: auto;
+        }
+    } 
+}

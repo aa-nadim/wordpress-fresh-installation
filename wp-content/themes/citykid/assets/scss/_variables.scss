@@ -1,0 +1,142 @@
+$prefix: citykid-;
+
+// scss-docs-start color-variables
+$blue:    #0d6efd;
+$indigo:  #6610f2;
+$purple:  #6f42c1;
+$pink:    #d63384;
+$red:     #dc3545;
+$orange:  #fd7e14;
+$yellow:  #ffc107;
+$green:   #198754;
+$teal:    #20c997;
+$cyan:    #0dcaf0;
+
+// colors
+$primary:               #fa4a47;
+$secondary:             #424242;
+$dark:                  #242424; 
+$light:                 #f7f7f7;
+$white:                 #fff;
+
+$text-body:             #353535;
+$text-heading:          #140000;
+$primary-darken:        #cc3f49;
+
+// Spacing
+// scss-docs-start spacer-variables-maps
+$spacer: 1rem;
+$spacers: (
+  0: 0,
+  1: $spacer * .25,
+  2: $spacer * .5,
+  3: $spacer,
+  4: $spacer * 1.5,
+  5: $spacer * 0.3125,
+  10: $spacer * 0.625,
+  15: $spacer * 0.9375,
+  20: $spacer * 1.25,
+  30: $spacer * 1.875,
+  40: $spacer * 2.5,
+  50: $spacer * 3.125,
+  60: $spacer * 3.75,
+  70: $spacer * 4.375,
+  80: $spacer * 5,
+  100: $spacer * 6.25,
+  120: $spacer * 7.5
+);
+
+// fonts
+$font-family-base:                  'Source Sans Pro', sans-serif;
+$font-size-base:                    1rem;
+
+// Body
+$body-bg:                           $light;
+$body-color:                        $text-body;
+
+
+// Links
+$link-decoration:                   var(--#{$prefix}link-decoration, none);
+$link-hover-decoration:             var(--#{$prefix}link-hover-decoration, none);
+
+// Headings
+$headings-font-family:              var(--#{$prefix}headings-font-family, var(--#{$prefix}body-font-family));
+$headings-color:                    var(--#{$prefix}headings-color, $text-heading);
+$headings-font-weight:              600;
+$h1-font-size:                      $font-size-base * 2.875;
+$h2-font-size:                      $font-size-base * 2.1875;
+$h3-font-size:                      $font-size-base * 1.6875;
+$h4-font-size:                      $font-size-base * 1.5;
+$h5-font-size:                      $font-size-base * 1.25;
+$h6-font-size:                      $font-size-base;
+
+// Navbar
+$navbar-nav-link-padding-x:         1.25rem;
+
+$navbar-light-color:                $text-heading;
+$navbar-light-hover-color:          $primary;
+$navbar-light-active-color:         $primary;
+
+// scss-docs-start navbar-dark-variables
+$navbar-dark-color:                 $white;
+$navbar-dark-hover-color:           $white;
+$navbar-dark-active-color:          $primary;
+
+// border radius
+$border-radius:               0;
+$border-radius-sm:            0;
+$border-radius-lg:            .5rem;
+$border-radius-xl:            1rem;
+$border-radius-2xl:           2rem;
+$border-radius-pill:          50rem;
+
+// Dropdowns
+$dropdown-padding-y:                0;
+$dropdown-spacer:                   0;
+$dropdown-border-width:             0;
+$dropdown-link-hover-color:         $primary;
+$dropdown-border-radius:            $border-radius;
+
+$dropdown-item-padding-y:           0.5rem;
+
+// Buttons + Forms
+$btn-font-size:                     14px;
+$btn-font-weight:                   600;
+$btn-padding-x:                     2.375rem;
+$input-btn-padding-y:               .75rem;
+$input-btn-padding-x:               .75rem;
+$input-btn-border-width:            2px;
+$input-focus-width:                 0;
+$input-focus-box-shadow:            none;
+$input-focus-bg:                    $white;
+$input-focus-border-color:          inherit;
+
+
+// Cards
+$card-spacer-y:                     35px;
+$card-spacer-x:                     30px; 
+
+// Badges
+
+// scss-docs-start badge-variables
+$badge-font-size:                   .75em;
+$badge-padding-y:                   .55em;
+$badge-padding-x:                   .85em;
+$badge-border-radius:               3px;
+$badge-font-weight:                 600;
+
+// Accordion
+$accordion-border-width: 0;
+$accordion-padding-x: 0;
+$accordion-border-radius: 0;
+$accordion-button-active-bg: transparent;
+$accordion-button-focus-border-color:  transparent;
+$accordion-button-focus-box-shadow:  none;
+$accordion-icon-active-color: $headings-color;
+
+
+// extra
+$content-width:                     740px;
+
+
+$enable-negative-margins:    true;

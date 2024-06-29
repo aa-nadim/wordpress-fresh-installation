@@ -1,0 +1,127 @@
+#controlListingsMap{
+    min-height: 600px;
+    margin-bottom: 30px;
+    font-family: var(--#{$prefix}body-font-family);
+    a{
+        color: var(--#{$prefix}link-color);
+        &.leaflet-popup-close-button{
+            background-color: #fff;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            line-height: 28px;
+            font-weight: bold;
+            right: -11px;
+            top: -11px;
+          
+        }
+        &:hover,
+        &:focus{
+            color: var(--#{$prefix}link-hover-color);
+        }
+    }
+    .leaflet-popup-content{
+        margin: 0;
+    }
+    .leaflet-popup-content-wrapper{
+        background-color: transparent;
+        box-shadow: none;
+    }
+    
+    .leaflet-popup-tip-container{
+        left: 20px;
+        margin-top: -2px;
+        z-index: 999;
+    }
+    
+    .leaflet-popup-tip{
+        background-color: $gray-100;
+        border-color: transparent $gray-400 $gray-400 transparent;
+        border-style: solid;
+        border-width: $card-border-width;
+        box-shadow: none;
+    }
+    .marker-cluster-small{ 
+        border: 2px solid var(--#{$prefix}primary);       
+        background-color: #fff;
+        box-shadow: $box-shadow;
+        > div{                        
+            background-color: transparent;
+            margin-left: 0;
+            width: 100%;
+        }
+    }
+    
+    .marker-cluster {
+        span{
+            color: var(--#{$prefix}dark);
+            font-weight: bold;
+            font-size: 1rem;
+            line-height: 26px;
+            font-family: var(--#{$prefix}body-font-family);
+        }
+    }
+
+   .card-listing-map{
+    --#{$prefix}card-spacer-x: 20px;
+    --#{$prefix}card-spacer-y: 25px;
+    --#{$prefix}card-cap-padding-x: 20px; 
+    --#{$prefix}card-cap-padding-y: 15px; 
+   }
+        
+    
+    
+}
+
+.map-marker-icon{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center; 
+    top: -17px;
+    left: -7px;   
+    --#{$prefix}border-color: var(--#{$prefix}primary);
+    &:after{
+        content: "";
+        border-radius: 50% 50% 50% 0;
+        width: 100%;
+        height: 100%;
+        transform: rotate(-45deg);
+        background-color: #fff;  
+        border: var(--#{$prefix}border-width) solid var(--#{$prefix}border-color);      
+        position: absolute;
+        top: 0;
+        left: 0;
+        box-shadow: $box-shadow-lg;
+    }
+    
+    i,
+    svg{
+        position: relative;
+        z-index: 9;
+        font-size: 1.25rem;
+        font-weight: bold;
+    }
+}
+
+.ctrl-listing-bookmark-btn,
+.ctrl-listing-favorite{
+    cursor: pointer;
+    > *{
+        pointer-events: none;
+    }
+}
+
+.control-listings-bookmarks-form{
+    &:not(.has-bookmark) .remove-bookmark-wrapper{
+        display: none;
+    }
+}
+
+.map-view-content{
+    max-height: 100vh;
+    overflow-y: scroll;
+}
+
+

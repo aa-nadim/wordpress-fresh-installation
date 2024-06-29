@@ -1,0 +1,13 @@
+.listings-user-account{
+    .nav{
+        --#{$prefix}link-color: var(--#{$prefix}headings-color);
+        --#{$prefix}link-hover-color: var(--#{$prefix}primary);        
+    }
+    table{
+        a{
+            --#{$prefix}link-color: var(--#{$prefix}headings-color);
+            --#{$prefix}link-hover-color: var(--#{$prefix}primary);  
+            font-weight: $headings-font-weight;
+        }
+    }
+}

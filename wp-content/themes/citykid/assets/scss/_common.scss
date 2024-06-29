@@ -1,0 +1,491 @@
+html{
+    overflow-x: hidden;
+}
+html, body{
+    min-height: 100vh;
+}
+body{
+    overflow-x: hidden;
+    --swiper-theme-color: var(--#{$prefix}primary);
+    display: flex;
+    flex-direction: column;
+    -ms-word-wrap: break-word;
+    word-wrap: break-word;
+    padding-right: 0 !important;
+}
+.footer-section{
+    margin-top: auto;
+}
+figure,
+iframe{
+    max-width: 100%;
+}
+svg{
+    fill: currentColor;
+    fill-rule: evenodd;
+}
+.text-light,
+.text-white{
+    --#{$prefix}headings-color: #fff;
+}
+
+.author-name,
+.nav-links,
+.card-title,
+.post-title,
+.text-heading{
+    --#{$prefix}link-color: var(--#{$prefix}headings-color);
+    --#{$prefix}link-hover-color: var(--#{$prefix}primary);
+    --#{$prefix}link-decoration: none;
+	--#{$prefix}link-hover-decoration: none;
+}
+
+.link-white{
+    --#{$prefix}link-color: var(--#{$prefix}white);
+    --#{$prefix}link-hover-color: var(--#{$prefix}white);
+}
+.link-underline{
+    --#{$prefix}link-decoration: underline;
+}
+
+.more-link{
+    --#{$prefix}link-hover-color: var(--#{$prefix}dark);
+}
+
+.card-body{
+    .list-group{
+        --#{$prefix}list-group-item-padding-x: 0;
+    }
+    .list-group-item{
+        display: flex;
+        column-gap: 7px;
+        align-items: center;
+
+        svg{
+            color: var(--#{$prefix}primary);
+        }
+    }
+}
+
+.text-muted{
+    --#{$prefix}link-color: #{$text-muted};
+    --#{$prefix}link-hover-color: var(--#{$prefix}primary);
+}
+
+input[type="submit"]:not(.btn),
+button[type="submit"]:not(.btn){    
+    --#{$prefix}btn-color: var(--#{$prefix}white);
+    --#{$prefix}btn-bg: var(--#{$prefix}primary);
+    --#{$prefix}btn-border-color: var(--#{$prefix}primary);
+    --#{$prefix}btn-hover-color: var(--#{$prefix}white);
+    --#{$prefix}btn-hover-bg: var(--#{$prefix}dark);
+    --#{$prefix}btn-hover-border-color: var(--#{$prefix}dark);     
+}
+.badge{
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    --#{$prefix}link-hover-color: var(--#{$prefix}dark);
+}
+.badge-primary{
+    background-color: rgba(var(--#{$prefix}primary-rgb), .1);
+    --#{$prefix}link-hover-color: var(--#{$prefix}dark);
+}
+.badge-secondary{
+    background-color: rgba(var(--#{$prefix}secondary-rgb), .1);
+    --#{$prefix}link-hover-color: var(--#{$prefix}primary);
+}
+
+
+
+.post-password-form,
+.searchform > div{
+    display: flex;
+    column-gap: 5px;
+    row-gap: 5px;
+}
+
+.post-password-form__label,
+.screen-reader-text {
+    border: 0;
+    clip: rect(1px, 1px, 1px, 1px);
+    clip-path: inset(50%);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    word-wrap: normal !important;
+  }
+
+.wp-block-tag-cloud,
+.tagcloud{
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 6px;
+    row-gap: 6px;
+    --#{$prefix}link-color: var(--#{$prefix}white);
+    --#{$prefix}link-hover-color: var(--#{$prefix}white);
+    --#{$prefix}link-decoration: none;
+	--#{$prefix}link-hover-decoration: none;
+    a{
+        font-size: 12px !important;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        padding: 8px 12px;
+        background-color: var(--#{$prefix}primary);
+        border-radius: $border-radius-sm;
+        &:hover,
+        &:focus{
+            background-color: var(--#{$prefix}secondary);
+        }
+    }
+}
+.btn{
+    --#{$prefix}link-decoration: none;
+	--#{$prefix}link-hover-decoration: none;
+}
+.btn-primary{
+    --#{$prefix}btn-color: var(--#{$prefix}white);
+    --#{$prefix}btn-hover-color: var(--#{$prefix}white);
+    --#{$prefix}btn-bg: var(--#{$prefix}primary);
+    --#{$prefix}btn-hover-bg: var(--#{$prefix}dark);
+    --#{$prefix}btn-border-color: var(--#{$prefix}primary);
+    --#{$prefix}btn-hover-border-color: var(--#{$prefix}dark);
+}
+.btn-outline-primary{
+    --#{$prefix}btn-border-color: var(--#{$prefix}primary);
+    --#{$prefix}btn-color: var(--#{$prefix}dark);
+    --#{$prefix}btn-hover-color: var(--#{$prefix}white);
+    --#{$prefix}btn-hover-bg: var(--#{$prefix}primary);
+    --#{$prefix}btn-hover-border-color: var(--#{$prefix}primary);
+}
+
+.nav-pills{
+    --#{$prefix}nav-pills-link-active-bg: var(--#{$prefix}primary);
+}
+
+.wp-block-image figcaption,
+figcaption{
+    font-style: italic;
+    font-size: 13px;
+}
+
+.card-img-top-content{
+    padding: var(--#{$prefix}card-spacer-x);
+}
+
+.entry-footer{
+    clear: both;
+}
+
+.alignright { float: right; margin: 0 0 1em 1em; }
+.alignleft { float: left; margin: 0 1em 1em 0; }
+.aligncenter { display: block; margin-left: auto; margin-right: auto; }
+.alignright { float: right; }
+.alignleft { float: left; }
+.aligncenter { display: block; margin-left: auto; margin-right: auto; }
+.wp-audio-shortcode [type="button"]{ padding: 0; border: 0; }
+
+.has-parallax{
+    position: relative;
+    overflow: hidden;
+
+    > *:not(.parallax){
+        z-index: 1;
+        position: relative;
+    }
+}
+
+.parallax{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: var(--#{$prefix}parallax-bg);
+    opacity: var(--#{$prefix}parallax-opacity, .25);
+    background-size: var(--#{$prefix}parallax-bg-size, cover);
+    background-position: var(--#{$prefix}parallax-bg-position, center);
+    z-index: 0;
+}
+
+.text-bg-dark,
+.text-bg-primary,
+.text-bg-secondary{
+    --#{$prefix}headings-color: #fff;
+    .blockquote-footer{
+        color: #fff;
+    }
+}
+
+.entry-content{
+    figure,
+    > *{
+        margin-bottom: 30px;
+    }
+
+    blockquote{
+        border-left: 4px solid var(--#{$prefix}blockquote-border-color, #000);
+        padding-left: 1rem;
+    }
+
+    .wp-block-pullquote{
+        blockquote{
+            border-left: 0;
+        }
+    }
+}
+.comment-metadata{
+    > a{
+        --#{$prefix}link-color: rgba(var(--#{$prefix}body-color-rgb), .8);
+    }
+    .reviewr-name{
+        --#{$prefix}link-color: var(--#{$prefix}headings-color);
+    }
+}
+.comment-content{
+    padding-left: 95px;
+}
+
+.required-field-message{
+    display: block;
+}
+
+.card.comment-respond{
+    padding: var(--#{$prefix}card-spacer-y) var(--#{$prefix}card-spacer-x);
+}
+
+.comment .card.comment-respond{
+    margin-bottom: var(--#{$prefix}card-spacer-y);
+}
+
+.list-unstyled .children{
+    list-style: none;
+}
+.banner-subtitle{
+    p{
+        max-width: 768px;
+        &:last-child{
+            margin-bottom: 0;
+        }
+    }
+    
+}
+
+.numeric-pagination{
+    --#{$prefix}pagination-border-width: #{$btn-border-width};
+    --#{$prefix}pagination-border-color: var(--#{$prefix}border-color);
+    --#{$prefix}link-hover-color: var(--#{$prefix}primary);
+    --#{$prefix}link-color: var(--#{$prefix}headings-color);
+    clear: both;
+    > a,
+    > span{
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 40px;
+        min-height: 40px;  
+        border: var(--#{$prefix}pagination-border-width) solid var(--#{$prefix}pagination-border-color);  
+        border-radius: var(--#{$prefix}border-radius);
+        font-weight: #{$headings-font-weight};  
+        line-height: 1;
+    }
+    
+    > .current{
+        --#{$prefix}pagination-border-color: var(--#{$prefix}primary);
+        background-color: var(--#{$prefix}pagination-border-color);
+        color: #fff;
+    }
+    > span.dots{
+        --#{$prefix}pagination-border-width: 0;
+        min-width: auto;
+    }
+    > .next,
+    > .prev{
+        --#{$prefix}pagination-border-width: 0;
+        column-gap: 5px;
+        svg{
+            margin-bottom: -2px;
+        }
+    }
+}
+
+.listing-categories{
+    --#{$prefix}cat-bg-color: var(--#{$prefix}primary);
+    a{
+        --#{$prefix}link-color: #fff;
+        --#{$prefix}link-hover-color: #fff;
+        background-color: var(--#{$prefix}cat-bg-color);
+        display: inline-block;
+        padding: 2px 10px;
+        letter-spacing: 1px;
+        border-radius: 1px;
+        display: none;
+        &:hover,
+        &:focus{
+            background-color: var(--#{$prefix}dark);
+        }
+        &:nth-child(-n+5){
+            display: inline-flex;
+        } 
+    }
+}
+
+.offcanvas{
+    &.showing,
+    &.show{
+        margin-top: var(--wp-admin--admin-bar--height);
+    }    
+}
+
+.swiper{
+    --swiper-pagination-bullet-width: 12px;
+    --swiper-pagination-bullet-height: 12px;
+    --swiper-pagination-bullet-inactive-opacity: 1;
+    --swiper-pagination-bullet-inactive-color: transparent;
+    .swiper-pagination-bullet{
+        border: 2px solid var(--swiper-theme-color);
+        transform: scale(1) !important;
+    }
+    &:not(.swiper-initialized){
+        .swiper-wrapper{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: center;
+        }
+       
+    }
+}
+
+.video-icon{
+    color: #fff;
+    width: 80px;
+    height: 80px;
+    border-radius: 100%;
+    background-color: var(--#{$prefix}primary);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    svg{
+        fill: var(--#{$prefix}white);
+        position: relative;
+        right: -2px;
+    }
+    &:before{
+        content: '';
+        position: absolute;
+        left: -5px;
+        right: -5px;
+        top: -5px;
+        bottom: -5px;
+        background: rgba(255, 255, 255, 0.2);
+        opacity: 0;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        border-radius: 50%;
+        transition: all 400ms ease-in-out;
+    }
+    &:hover::before{
+        opacity: .75;
+        left: -20px;
+        right: -20px;
+        top: -20px;
+        bottom: -20px;
+    }
+}
+
+@for $i from 1 through 6 {
+    .max-width-#{$i*100} {
+      max-width: #{$i*100}px;
+    }
+}
+
+.bypostauthor,
+.gallery-caption,
+.wp-caption-text,
+.wp-caption{
+    font-variant: normal;
+}
+
+.gallery{
+    --#{$prefix}gutter-x: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: var(--#{$prefix}gutter-x);
+    column-count: var(--#{$prefix}gallery-column-count, 1);
+    margin-right: calc(-.5 * var(--#{$prefix}gutter-x));
+    margin-left: calc(-.5 * var(--#{$prefix}gutter-x));
+    .gallery-item{
+        flex: 0 0 auto; 
+        flex-shrink: 0;
+        width: calc(100% / var(--#{$prefix}gallery-column-count));   
+        max-width: 100%;   
+        padding-right: calc(var(--#{$prefix}gutter-x) * .5);
+        padding-left: calc(var(--#{$prefix}gutter-x) * .5);      
+        margin-bottom: 0;
+        position: relative;
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        figcaption{            
+            padding-top: calc(var(--#{$prefix}gutter-x) * .25);
+        }
+    }    
+}
+@for $i from 1 through 9 {
+    .gallery-columns-#{$i} {
+        --#{$prefix}gallery-column-count: #{$i};
+        @if  $i > 4{
+            --#{$prefix}gutter-x: 10px;
+        }          
+    }
+}
+@include media-breakpoint-down(md) {
+    @for $i from 1 through 9 {
+        .gallery-columns-#{$i} {        
+            @if  $i < 3{
+                --#{$prefix}gallery-column-count: 1;
+            } @else{
+                --#{$prefix}gallery-column-count: 2;
+                --#{$prefix}gutter-x: 10px;
+            }          
+        }
+    }
+}
+
+.container-wrap > .wp-block-group__inner-container{
+    @include make-container();
+    position: initial;
+}
+// Responsive containers that are 100% wide until a breakpoint
+@each $breakpoint, $container-max-width in $container-max-widths { 
+    @include media-breakpoint-up($breakpoint, $grid-breakpoints) {
+        .container-wrap > .wp-block-group__inner-container{
+          max-width: $container-max-width;
+        }
+    }
+}
+
+.wp-block-quote {
+    border-left: .25em solid var(--#{$prefix}dark);
+    margin: 0 0 1.75em;
+    padding-left: 1em;
+}
+
+.comment-reply-title{
+    #cancel-comment-reply-link{
+        margin-left: 20px;
+    }
+}
+.more-link{
+    --#{$prefix}link-color: initial;
+    --#{$prefix}link-hover-color: var(--#{$prefix}primary);
+    --#{$prefix}link-decoration: none;
+    --#{$prefix}link-hover-decoration: none;
+}

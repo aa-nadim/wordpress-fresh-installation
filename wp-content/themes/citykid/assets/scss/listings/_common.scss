@@ -1,0 +1,83 @@
+.listing-range-slider {
+    --#{$prefix}handale-size: 16px;
+    --#{$prefix}bar-height: 4px;
+    --#{$prefix}handale-border-width: 2px;
+	width:100%;
+    float:left;
+	
+	
+	.listing-range-bar {
+		border: none;
+		background: $form-range-track-bg;
+		height: var(--#{$prefix}bar-height);	
+		width: $form-range-track-width;
+        position: relative;
+        border-radius: var(--#{$prefix}border-radius);
+		
+		.ui-slider-range {
+			background: var(--#{$prefix}secondary);
+            position: absolute;
+            height: var(--#{$prefix}bar-height);
+            
+		}
+		
+		.ui-slider-handle {
+			border:none;
+			border-radius: 50%;
+			background:#fff;
+			border: var(--#{$prefix}handale-border-width) solid var(--#{$prefix}primary);
+			height: var(--#{$prefix}handale-size);
+			width: var(--#{$prefix}handale-size);
+			cursor:pointer;
+            position: absolute;
+            top: -6px;
+		}
+		.ui-slider-handle + span {
+			background:var(--#{$prefix}primary);
+            left: 100%;
+            margin-left: -16px;
+		}
+	}
+}
+
+
+.shadow-bottom{
+	&:after{
+		z-index: 0;
+		content: "";
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.75) 100%);
+	}
+	> *{
+		z-index: 1;
+	}
+}
+.shadow-top{
+	background-image: linear-gradient(to top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.75) 100%);
+}
+
+
+@mixin social_link_color($brand, $color){
+	.btn.btn-#{$brand}{
+		--#{$prefix}btn-color: #{$color};	
+		--#{$prefix}btn-border-color: #{$color};
+		--#{$prefix}btn-hover-border-color: #{$color};	
+		--#{$prefix}btn-hover-bg: #{$color};
+	}
+}
+
+@include social_link_color(linkedin, #0A66C2);
+@include social_link_color(fb, #1877F2);
+@include social_link_color(twitter, #1DA1F2);
+@include social_link_color(whatsapp, #25D366);
+@include social_link_color(skype, #00AFF0);
+@include social_link_color(pinterest, #BD081C);
+@include social_link_color(vk, #4C75A3);
+@include social_link_color(tumblr, #34465D);
+@include social_link_color(reddit, #FF5700);
+@include social_link_color(weibo, #DF2029);
+@include social_link_color(telegram, #229ED9);

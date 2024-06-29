@@ -1,0 +1,16 @@
+.citykid-range-control {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 5px;
+}
+
+.citykid-range-control .range-value {
+  width: 65px !important;
+  background-color: var(--citykid-dark);
+  border-color: var(--citykid-dark);
+  color: #fff;
+  font-weight: 600 !important;
+}
+
+/*# sourceMappingURL=citykid-customize.css.map */

@@ -1,0 +1,69 @@
+.modal-body{
+    .mbup-form{       
+        h2{
+            display: none;
+        }
+    }
+}
+
+@include media-breakpoint-up(lg){
+    .listing-slider-wrapper{
+        max-width: 750px;
+        .swiper{
+            overflow: visible;
+        }
+        .swiper-button-prev{
+            left: -45px;
+        }    
+        .swiper-button-next{
+            right: -45px;
+        }
+    }
+}
+
+.listing-slider-wrapper{
+    .swiper{
+        display: none;
+        &.swiper-initialized{
+            display: block;
+        }
+    }
+    .swiper-button{
+        --swiper-navigation-size: 24px;
+        display: none;    
+    }
+    &:hover,
+    &:focus{
+        .swiper-button{
+            display: block;
+        }
+    } 
+    
+
+    .slide-caption{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        bottom: 0;
+        display: none;
+    }
+
+    .single-listing-gallery-image{
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .swiper-slide-active{
+        &:hover,
+        &:focus{
+            .slide-caption{
+                display: flex;
+            }            
+            .single-listing-gallery-image{
+                opacity: .5;
+            }
+        }
+    }
+} 
+

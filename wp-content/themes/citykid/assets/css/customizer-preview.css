@@ -1,0 +1,17 @@
+.copyright-section > .customize-partial-edit-shortcut,
+.footer-section > .customize-partial-edit-shortcut,
+.banner-section > .customize-partial-edit-shortcut,
+.header-section > .customize-partial-edit-shortcut {
+  position: absolute !important;
+  right: 5px !important;
+  z-index: 99;
+}
+
+.copyright-section > .customize-partial-edit-shortcut > button,
+.footer-section > .customize-partial-edit-shortcut > button,
+.banner-section > .customize-partial-edit-shortcut > button,
+.header-section > .customize-partial-edit-shortcut > button {
+  background-color: var(--citykid-primary, #3582c4) !important;
+}
+
+/*# sourceMappingURL=customizer-preview.css.map */

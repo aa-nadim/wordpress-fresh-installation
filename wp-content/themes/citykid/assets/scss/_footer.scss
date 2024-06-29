@@ -1,0 +1,106 @@
+.footer-widgets{
+    --#{$prefix}body-font-size: .875rem;
+    --#{$prefix}border-color: rgba(var(--#{$prefix}dark-rgb), .1);
+}
+
+.footer-widget{    
+    --#{$prefix}link-hover-color: var(--#{$prefix}primary);
+    --#{$prefix}list-icon-color: var(--#{$prefix}primary);    
+    --#{$prefix}list-gap: 15px;
+    font-size: var(--#{$prefix}body-font-size);    
+
+    a:before{
+        display: none
+    }
+
+}
+
+.footer-section{
+    --#{$prefix}link-color: var(--#{$prefix}heading-color);
+    &.text-white{
+        --#{$prefix}text-opacity: .8;
+        --#{$prefix}link-color: var(--#{$prefix}white);
+        --#{$prefix}body-color: var(--#{$prefix}white);
+        .footer-widgets{
+            --#{$prefix}border-color: rgba(var(--#{$prefix}white-rgb), .1);            
+        }
+        
+    }
+    .copyright-section{
+        --#{$prefix}link-color: var(--#{$prefix}heading-color);
+        --#{$prefix}border-color: rgba(var(--#{$prefix}dark-rgb), .1);
+        .nav{
+            --citykid-nav-link-color: inherit;
+        }
+        
+        &.text-white{
+            --#{$prefix}text-opacity: .8;
+            --#{$prefix}link-color: var(--#{$prefix}white);
+            --#{$prefix}body-color: var(--#{$prefix}white); 
+            --#{$prefix}border-color: rgba(var(--#{$prefix}white-rgb), .1);
+        }
+
+        &.bg-tra{
+            .copyright-inner{
+                border-top: 1px solid var(--#{$prefix}border-color);
+            }            
+        }
+    }
+}
+
+
+
+.scrolltop{
+    width: 40px;
+    height: 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(var(--#{$prefix}white-rgb), .1);
+}
+
+#scrollUp {
+	display: none;
+	width: 40px;
+    height: 40px;
+	position: fixed;
+	bottom: 30px;
+	right: 30px;
+	
+    .icon-wrap{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        border-radius: var(--#{$prefix}border-width);
+        border: 1px solid rgba(var(--#{$prefix}white-rgb), .1);
+        background-color: rgba(var(--#{$prefix}dark-rgb), 1);
+        transition: all 250ms linear;	
+        color: rgba(var(--#{$prefix}primary-rgb), 1);
+    }
+
+	.arrow-up {
+		border-style: solid;
+		border-color: #fff;
+		border-width: 0 2px 2px 0;
+		display: inline-flex;
+		padding: 4px;
+		position: relative;
+		top: 2px;
+		transform: rotate(-135deg);
+		-webkit-transform: rotate(-135deg);
+
+	}
+
+	&:hover,
+	&:focus {
+        .icon-wrap{
+            background-color: rgba(var(--#{$prefix}primary-rgb), 1);
+        }
+		
+
+
+	}
+}

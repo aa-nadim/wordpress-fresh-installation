@@ -1,0 +1,13 @@
+.copyright-section,
+.footer-section,
+.banner-section,
+.header-section{
+    > .customize-partial-edit-shortcut{
+        position: absolute !important;
+        right: 5px !important;
+        z-index: 99;
+        > button{
+            background-color: var(--citykid-primary, #3582c4) !important;
+        }
+    }
+}

@@ -1,0 +1,12 @@
+{
+	"version": 3,
+	"file": "customizer-preview.css",
+	"sources": [
+		"../scss/customizer-preview.scss"
+	],
+	"sourcesContent": [
+		".copyright-section,\r\n.footer-section,\r\n.banner-section,\r\n.header-section{\r\n    > .customize-partial-edit-shortcut{\r\n        position: absolute !important;\r\n        right: 5px !important;\r\n        z-index: 99;\r\n        > button{\r\n            background-color: var(--citykid-primary, #3582c4) !important;\r\n        }\r\n    }\r\n}"
+	],
+	"names": [],
+	"mappings": "AAAA,AAII,kBAJc,GAIZ,gCAAgC;AAHtC,eAAe,GAGT,gCAAgC;AAFtC,eAAe,GAET,gCAAgC;AADtC,eAAe,GACT,gCAAgC,CAAA;EAC9B,QAAQ,EAAE,mBAAmB;EAC7B,KAAK,EAAE,cAAc;EACrB,OAAO,EAAE,EAAE;CAId;;AAXL,AAQQ,kBARU,GAIZ,gCAAgC,GAI5B,MAAM;AAPhB,eAAe,GAGT,gCAAgC,GAI5B,MAAM;AANhB,eAAe,GAET,gCAAgC,GAI5B,MAAM;AALhB,eAAe,GACT,gCAAgC,GAI5B,MAAM,CAAA;EACJ,gBAAgB,EAAE,+BAA+B,CAAC,UAAU;CAC/D"
+}

@@ -1,0 +1,98 @@
+.rwmb-tabs{    
+    border: var(--#{$prefix}border-width) solid var(--#{$prefix}border-color);
+    border-radius: var(--#{$prefix}border-radius);
+    overflow: hidden;
+    &.rwmb-tabs-left{
+        margin: 0;
+        .rwmb-tab-nav{  
+            --#{$prefix}link-color: var(--#{$prefix}headings-color);
+            --#{$prefix}link-hover-color: var(--#{$prefix}primary);          
+            --#{$prefix}nav-link-padding-x: #{$nav-link-padding-x};
+            --#{$prefix}nav-link-padding-y: calc(#{$nav-link-padding-y} * 2);
+            @include rfs($nav-link-font-size, --#{$prefix}nav-link-font-size);
+            --#{$prefix}nav-link-font-weight: #{$nav-link-font-weight};
+            --#{$prefix}nav-link-color: #{$nav-link-color};
+            --#{$prefix}nav-link-hover-color: #{$nav-link-hover-color};
+            --#{$prefix}nav-link-disabled-color: #{$nav-link-disabled-color};
+            li{
+                min-width: 200px;
+                &.rwmb-tab-active{
+                    color: var(--#{$prefix}primary);
+                }
+            }
+            a{
+                display: block;
+                padding: var(--#{$prefix}nav-link-padding-y) var(--#{$prefix}nav-link-padding-x);
+                @include font-size(var(--#{$prefix}nav-link-font-size));
+                font-weight: var(--#{$prefix}nav-link-font-weight);
+                color: var(--#{$prefix}nav-link-color);
+                text-decoration: if($link-decoration == none, null, none);
+                @include transition($nav-link-transition);
+                line-height: $line-height-base;
+                font-weight: $headings-font-weight;
+            }
+            
+        }
+        .rwmb-tab-panel{
+            padding: calc(#{$nav-link-padding-y} * 2);
+        }
+    }
+}
+
+.rwmb-meta-box{
+    
+    .add-clone{
+        font-weight: bold;
+        text-decoration: underline;
+        --#{$prefix}link-color: var(--#{$prefix}primary);
+        --#{$prefix}link-hover-color: var(--#{$prefix}headings-color);
+    }    
+    .rwmb-group-title{
+        font-size: $font-size-base;
+    }
+    
+    .rwmb-group-collapsible {
+        > .rwmb-input > .rwmb-group-clone{
+            border-top: 40px solid var(--#{$prefix}gray-100);
+            border-radius: var(--#{$prefix}border-radius);        
+        }
+        .rwmb-group-title-wrapper{
+            height: 40px;
+            line-height: 40px;
+            top: -40px;
+        }
+        .rwmb-group-toggle-handle{
+            border: none;
+            box-shadow: none;
+            background-color: transparent;
+            top: -40px;
+            height: 40px;
+        }
+    }
+    .rwmb-button{
+        &.remove-clone{
+            margin: 0;
+        }
+    }
+    .rwmb-key_value-clone{
+        column-gap: 5px;
+        align-items: center;
+        padding: 0;
+    }
+    .rwmb-files{
+        padding: 0;
+    }
+    .rwmb-file-icon img{
+        height: auto !important;
+    }
+}
+
+.rwmb-form{
+    display: grid;
+    row-gap: 30px;
+    .rwmb-form-submit{
+        .rwmb-button{
+            margin-top: 0;
+        }
+    }
+}

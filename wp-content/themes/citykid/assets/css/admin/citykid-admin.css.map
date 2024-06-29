@@ -1,0 +1,12 @@
+{
+	"version": 3,
+	"file": "citykid-admin.css",
+	"sources": [
+		"../../scss/admin/citykid-admin.scss"
+	],
+	"sourcesContent": [
+		"#side-sortables{\r\n    .image_select-wrapper{\r\n        .rwmb-input{\r\n            display: flex;\r\n            gap: 5px;\r\n            flex-wrap: nowrap;\r\n        }\r\n    }\r\n    .rwmb-image-select{\r\n        width: 60px;\r\n        height: auto;\r\n        display: inline-flex;\r\n        margin: 0;\r\n        float: none;\r\n        img{\r\n            height: auto;\r\n        }\r\n    } \r\n}\r\n"
+	],
+	"names": [],
+	"mappings": "AAAA,AAEQ,eAFO,CACX,qBAAqB,CACjB,WAAW,CAAA;EACP,OAAO,EAAE,IAAI;EACb,GAAG,EAAE,GAAG;EACR,SAAS,EAAE,MAAM;CACpB;;AANT,AAQI,eARW,CAQX,kBAAkB,CAAA;EACd,KAAK,EAAE,IAAI;EACX,MAAM,EAAE,IAAI;EACZ,OAAO,EAAE,WAAW;EACpB,MAAM,EAAE,CAAC;EACT,KAAK,EAAE,IAAI;CAId;;AAjBL,AAcQ,eAdO,CAQX,kBAAkB,CAMd,GAAG,CAAA;EACC,MAAM,EAAE,IAAI;CACf"
+}

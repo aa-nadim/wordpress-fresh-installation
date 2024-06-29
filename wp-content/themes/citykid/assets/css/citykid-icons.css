@@ -1,0 +1,143 @@
+@font-face {
+  font-family: 'citykid';
+  src:  url('../fonts/citykid.eot?83dbjk');
+  src:  url('../fonts/citykid.eot?83dbjk#iefix') format('embedded-opentype'),
+    url('../fonts/citykid.ttf?83dbjk') format('truetype'),
+    url('../fonts/citykid.woff?83dbjk') format('woff'),
+    url('../fonts/citykid.svg?83dbjk#citykid') format('svg');
+  font-weight: inherit;
+  font-style: inherit;
+}
+
+[class^="citykid-"], [class*=" citykid-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'citykid' !important;
+  speak: none;
+  font-style: inherit;
+  font-weight: inherit;
+  font-variant: inherit;
+  line-height: inherit;
+  font-size: inherit;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.citykid-angle-down:before {
+  content: "\e900";
+}
+.citykid-angle-left:before {
+  content: "\e901";
+}
+.citykid-angle-long-left-o:before {
+  content: "\e902";
+}
+.citykid-angle-long-right:before {
+  content: "\e903";
+}
+.citykid-angle-long-right-o:before {
+  content: "\e904";
+}
+.citykid-angle-right:before {
+  content: "\e905";
+}
+.citykid-angle-up:before {
+  content: "\e906";
+}
+.citykid-arro-right:before {
+  content: "\e907";
+}
+.citykid-caret-down:before {
+  content: "\e908";
+}
+.citykid-caret-left:before {
+  content: "\e909";
+}
+.citykid-caret-right:before {
+  content: "\e90a";
+}
+.citykid-cart:before {
+  content: "\e90b";
+}
+.citykid-check:before {
+  content: "\e90c";
+}
+.citykid-child:before {
+  content: "\e90d";
+}
+.citykid-clender:before {
+  content: "\e90e";
+}
+.citykid-close:before {
+  content: "\e90f";
+}
+.citykid-comment:before {
+  content: "\e910";
+}
+.citykid-envelop:before {
+  content: "\e911";
+}
+.citykid-facebook:before {
+  content: "\e912";
+}
+.citykid-globe:before {
+  content: "\e913";
+}
+.citykid-heart:before {
+  content: "\e914";
+}
+.citykid-home:before {
+  content: "\e915";
+}
+.citykid-map-marker:before {
+  content: "\e916";
+}
+.citykid-phone:before {
+  content: "\e917";
+}
+.citykid-pinterest:before {
+  content: "\e918";
+}
+.citykid-play:before {
+  content: "\e919";
+}
+.citykid-plus:before {
+  content: "\e91a";
+}
+.citykid-quote-left:before {
+  content: "\e91b";
+}
+.citykid-remove:before {
+  content: "\e91c";
+}
+.citykid-remove-folder:before {
+  content: "\e91d";
+}
+.citykid-serch:before {
+  content: "\e91e";
+}
+.citykid-share:before {
+  content: "\e91f";
+}
+.citykid-sign-out:before {
+  content: "\e920";
+}
+.citykid-star:before {
+  content: "\e921";
+}
+.citykid-star-o:before {
+  content: "\e922";
+}
+.citykid-tag:before {
+  content: "\e923";
+}
+.citykid-time:before {
+  content: "\e924";
+}
+.citykid-twitter:before {
+  content: "\e925";
+}
+.citykid-user:before {
+  content: "\e926";
+}
+

@@ -1,0 +1,106 @@
+
+
+.list-arrow{
+    --#{$prefix}list-icon-color: var(--#{$prefix}primary);
+    @include list-arrow;
+}
+
+.widget{
+    
+    --#{$prefix}link-color: var(--#{$prefix}body-color);
+    --#{$prefix}link-hover-color: var(--#{$prefix}primary);
+    --#{$prefix}list-icon-color: var(--#{$prefix}primary);
+    ul{
+        list-style: none;
+        margin-bottom: 0;
+    }
+    img{
+        max-width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+    
+    > div,
+    > nav{
+        > ul{
+            @include list-arrow-link;
+        }
+    }
+    
+
+    .widget-title{
+        margin-bottom: 1.25rem;
+    }
+
+    .wp-block-group__inner-container{
+        display: grid;
+        gap: 10px;
+        > h2{
+            font-size: #{$h4-font-size};
+        }
+        > *:last-child{
+            margin-bottom: 0;
+        }
+    }
+    
+}
+
+.wp-block-categories-list,
+.wp-block-archives-list{
+    --#{$prefix}link-color: var(--#{$prefix}body-color);
+    --#{$prefix}link-hover-color: var(--#{$prefix}primary);
+    --#{$prefix}list-icon-color: var(--#{$prefix}primary);
+    @include list-arrow-link;
+}
+
+.widget_rss li,
+.recentcomments,
+.wp-block-latest-comments__comment,
+
+.wp-block-rss{
+    --#{$prefix}link-color: var(--#{$prefix}headings-color);
+    --#{$prefix}link-hover-color: var(--#{$prefix}primary);
+    --#{$prefix}list-icon-color: var(--#{$prefix}primary);
+    --#{$prefix}link-decoration: underline;
+	--#{$prefix}link-hover-decoration: underline;
+}
+
+.comment-content > ul,
+.comment-content > ol,
+.entry-content > ul,
+.entry-content > ol{
+    list-style-position: var(--#{$prefix}list-style-position, inside);
+    padding-left: 0;
+    margin-bottom: 1rem;
+}
+
+.wp-block-latest-comments,
+.wp-block-latest-posts{
+    @include list-grid;
+}
+
+.has-sidebar{
+    --#{$prefix}sidebar-sticky-offset: calc(var(--wp-admin--admin-bar--height, 0px) + 2rem);    
+    &.has-sticky-navigation{
+        --#{$prefix}sidebar-sticky-offset: calc(var(--wp-admin--admin-bar--height, 0px) + 6rem);  
+    }
+}
+
+.widget-area.position-sticky{
+    top: var(--#{$prefix}sidebar-sticky-offset, 0px);
+}
+
+.listing-terms{
+    .active{
+        .term-name{
+            font-weight: 600;
+        }
+    }
+    
+}
+.inline-terms{
+    .active{
+        --#{$prefix}cat-bg-color: var(--#{$prefix}dark);
+    }
+}
+

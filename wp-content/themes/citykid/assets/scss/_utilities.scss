@@ -1,0 +1,22 @@
+$utilities: map-merge(
+  $utilities,
+  (
+    "cursor": (
+      property: cursor,
+      class: cursor,
+      values: auto pointer grab,
+    ),
+    "letter-spacing": (
+      property: letter-spacing,
+      class: letter-spacing,
+      values: (
+        1: 1px,
+        2: 2px,
+        3: 3px,
+        4: 4px,
+        5: 5px
+      ),
+    )
+  )
+);
+

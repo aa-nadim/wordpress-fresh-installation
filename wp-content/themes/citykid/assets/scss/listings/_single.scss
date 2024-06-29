@@ -1,0 +1,118 @@
+.listing-slider-wrapper{
+    .swiper-slide{
+        .single-listing-gallery-image{
+            transition: $transition-base;
+        }
+    }
+    .slide-caption{
+        transition: $transition-base;
+    }
+} 
+.institution-logo{
+    padding: 0 50px 50px;
+    img{
+        padding: 20px;
+        border: var(--#{$prefix}border-width) solid var(--#{$prefix}border-color);
+    }    
+}
+
+.single-listing-widget{
+    .list-group-item{
+        --#{$prefix}list-group-item-padding-x: var(--#{$prefix}card-spacer-x);
+        --#{$prefix}list-group-item-padding-y: var(--#{$prefix}card-spacer-y);
+    }   
+    
+}
+
+.card-listing{
+    .listing-categories{
+       padding: var(--#{$prefix}card-spacer-x);
+    }
+}
+
+
+
+%flex-display {
+    display: flex;
+}
+.star-rating {
+    @extend %flex-display;
+    align-items: center;
+    .dashicons{
+        font-size: inherit;
+        width: auto;
+        height: auto;
+    }
+}
+.back-stars {
+    @extend %flex-display;
+    position: relative;
+    color: var(--#{$prefix}rating-color, $gray-600);
+}
+.front-stars {
+    @extend %flex-display;
+    color: var(--#{$prefix}rating-color-active, #FFBC0B);
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    transition: all .5s
+}
+
+.accordion{
+    &.reviews-area{
+        --#{$prefix}accordion-btn-padding-x: 0;
+        --#{$prefix}accordion-btn-padding-y: 0;
+        --#{$prefix}accordion-active-bg: transparent;
+        --#{$prefix}accordion-border-color: transparent;
+    }
+    .accordion-button{
+        cursor: pointer;
+    }
+}
+
+.single-listing-tabs{
+    .nav{
+        --#{$prefix}link-color: #{$gray-600};
+        --#{$prefix}link-hover-color: var(--#{$prefix}primary);
+        .nav-link{
+            font-weight: #{$headings-font-weight};
+            margin-bottom: -1px;
+        }
+        .active{
+            --#{$prefix}nav-link-color: var(--#{$prefix}headings-color);
+            border-bottom: 3px solid var(--#{$prefix}primary);
+        }
+    }
+}
+#accordionListingFaqs{
+    --#{$prefix}link-color: var(--#{$prefix}headings-color);
+    --#{$prefix}link-hover-color: var(--#{$prefix}primary);
+    --#{$prefix}accordion-active-color: var(--#{$prefix}headings-color);
+    .accordion-item{
+        border-bottom: 2px solid var(--#{$prefix}gray-300);
+    }
+    .accordion-body{
+        padding-top: 0;
+    }
+}
+@include media-breakpoint-up(md){
+    .enquiry-footer{
+        padding: 0;
+        padding-left: var(--#{$prefix}card-cap-padding-x);
+        .price{
+            margin-right: var(--#{$prefix}card-cap-padding-x);
+        }
+    }
+}
+.enquiry-footer{
+    overflow: hidden;
+   
+    min-height: 48px;
+    .btn{
+        --#{$prefix}btn-border-radius: 0;
+        display: flex;
+        align-items: center;
+        column-gap: 10px;
+    }
+    
+}
