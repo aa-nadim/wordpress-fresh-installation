@@ -141,89 +141,6 @@ function citykid_supports_js()
 }
 add_action('wp_footer', 'citykid_supports_js');
 
-/**
- * Changes comment form default fields.
- *
- * @param 	array 	$defaults The form defaults.
- * @return 	array
- */
-function citykid_comment_form_defaults($defaults)
-{
-
-	// Adjust height of comment form.
-	$defaults['comment_field'] = preg_replace('/rows="\d+"/', 'rows="5"', $defaults['comment_field']);
-
-	return $defaults;
-}
-add_filter('comment_form_defaults', 'citykid_comment_form_defaults');
-
-/**
- * Determines if post thumbnail can be displayed.
- *
- * @return bool
- */
-function citykid_can_show_post_thumbnail()
-{
-	/**
-	 * Filters whether post thumbnail can be displayed.
-	 *
-	 * @param bool 	$show_post_thumbnail Whether to show post thumbnail.
-	 */
-	return apply_filters(
-		'citykid_can_show_post_thumbnail',
-		!post_password_required() && !is_attachment() && has_post_thumbnail()
-	);
-}
-
-/**
- * Returns the size for avatars used in the theme.
- *
- * @return int
- */
-function citykid_get_avatar_size()
-{
-	return 60;
-}
-
-/**
- * Creates continue reading text.
- */
-function citykid_continue_reading_text()
-{
-	$read_more_text = get_theme_mod('read_more_text', esc_attr__('Read more', 'citykid'));
-	$continue_reading = sprintf(
-		/* translators: %s: Post title. Only visible to screen readers. */
-		esc_html__('%s %s', 'citykid'),
-		esc_attr($read_more_text),
-		the_title('<span class="screen-reader-text">', '</span>', false)
-	);
-
-	return $continue_reading;
-}
-
-
-
-function citykid_excerpt_length($length)
-{
-	$custom = get_theme_mod('excerpt_length', $length);
-
-	return $length;
-}
-add_filter('excerpt_length', 'citykid_excerpt_length');
-
-/**
- * Creates the continue reading link for excerpt.
- */
-function citykid_excerpt_more()
-{
-	if (!is_admin()) {
-		$GLOBALS['citykid_continue_link'] = true;
-		return '&hellip;';
-	}
-}
-
-// Filter the excerpt more link.
-add_filter('excerpt_more', 'citykid_excerpt_more');
 
 
 
@@ -231,81 +148,10 @@ add_filter('excerpt_more', 'citykid_excerpt_more');
 
 
 
-/**
- * Changes the default navigation arrows to svg icons
- *
- * @param 	string 	$calendar_output 	The generated HTML of the calendar.
- * @return 	string
- */
-function citykid_change_calendar_nav_arrows($calendar_output)
-{
-	$calendar_output = str_replace('wp-calendar-nav', 'wp-calendar-nav d-flex justify-content-between', $calendar_output);
-	return $calendar_output;
-}
-add_filter('get_calendar', 'citykid_change_calendar_nav_arrows');
 
 
-/**
- * Print the first instance of a block in the content, and then break away.
- *
- * @param 	string      $block_name 	The full block type name, or a partial match.
- *                                		Example: `core/image`, `core-embed/*`.
- * @param 	string|null $content    	The content to search in. Use null for get_the_content().
- * @param 	int         $instances  	How many instances of the block will be printed (max). Default  1.
- * @return 	bool 		Returns true if a block was located & printed, otherwise false.
- */
-function citykid_print_first_instance_of_block($block_name, $content = null, $instances = 1)
-{
-	$instances_count = 0;
-	$blocks_content  = '';
 
-	if (!$content) {
-		$content = get_the_content();
-	}
 
-	// Parse blocks in the content.
-	$blocks = parse_blocks($content);
-
-	// Loop blocks.
-	foreach ($blocks as $block) {
-
-		// Sanity check.
-		if (!isset($block['blockName'])) {
-			continue;
-		}
-
-		// Check if this the block matches the $block_name.
-		$is_matching_block = false;
-
-		// If the block ends with *, try to match the first portion.
-		if ('*' === $block_name[-1]) {
-			$is_matching_block = 0 === strpos($block['blockName'], rtrim($block_name, '*'));
-		} else {
-			$is_matching_block = $block_name === $block['blockName'];
-		}
-
-		if ($is_matching_block) {
-			// Increment count.
-			$instances_count++;
-
-			// Add the block HTML.
-			$blocks_content .= render_block($block);
-
-			// Break the loop if the $instances count was reached.
-			if ($instances_count >= $instances) {
-				break;
-			}
-		}
-	}
-
-	if ($blocks_content) {
-		/** This filter is documented in wp-includes/post-template.php */
-		echo apply_filters('the_content', $blocks_content); // phpcs:ignore WordPress.Security.EscapeOutput
-		return true;
-	}
-
-	return false;
-}
 
 
 
