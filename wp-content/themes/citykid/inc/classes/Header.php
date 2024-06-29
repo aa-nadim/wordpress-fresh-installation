@@ -83,7 +83,6 @@ final class Header{
 		);
 
         $this->settings($wp_customize);
-        $this->add_partials($wp_customize);
 		
 	}
 
@@ -91,7 +90,6 @@ final class Header{
 
 		$wp_customize->get_section('header_image')->title = __( 'Header Settings', 'citykid' );
        
-
 		// custom nav button
 		$wp_customize->add_setting(
 			'custom_nav_button',
@@ -220,37 +218,7 @@ final class Header{
 		);
 
 
-        // banner_bg_color
-		$wp_customize->add_setting(
-			'banner_bg_color',
-            array(
-				'capability'        => 'edit_theme_options',
-				'default'           => 'bg-dark',				
-				'sanitize_callback' => static function( $value ) {
-					return esc_attr($value);
-				}
-			)			
-		);
-
-		$wp_customize->add_control( 
-            'banner_bg_color', 
-            array(
-                'type'          => 'select',
-                'section'       => 'header_image',
-                'label'   	=> esc_html__( 'Banner background color', 'citykid' ),
-				'choices' 	=> array(
-					'bg-primary' => 'Primary',
-                    'bg-secondary' => 'Secondary',
-                    'bg-danger' => 'Danger',
-                    'bg-warning' => 'Warning',
-                    'bg-info' => 'Info',
-                    'bg-light' => 'Light',
-                    'bg-dark' => 'Dark',
-                    'bg-white' => 'White',
-                    'bg-body' => 'Body',
-				),
-            ) 
-        );
+        
 
         // Banner image
 		$wp_customize->add_setting(

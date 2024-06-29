@@ -5,7 +5,7 @@ final class Footer{
 
     public function __construct() {
         add_action( 'customize_register', array( $this, 'register' ) );
-        add_action('wp_enqueue_scripts', [$this, 'dynamic_css']);
+        // add_action('wp_enqueue_scripts', [$this, 'dynamic_css']);
 	}
 
     /**
@@ -294,79 +294,6 @@ final class Footer{
 		$this->add_partials($wp_customize);
 	}
 
-    public function dynamic_css(){
-        $styles = [];
-        $attachment_id = get_theme_mod('footer_image');
-        if( in_array(get_post_type(), ['page', 'ctrl_listings']) ){
-            $page_attachment_id = get_post_meta(citykid_get_the_ID(), 'footer_image', true);
-            $attachment_id = (!empty($page_attachment_id) && !is_wp_error($page_attachment_id))? $page_attachment_id : $attachment_id;
-        }
 
-        $image_url = wp_get_attachment_image_url($attachment_id, 'full');
-        if(!empty($image_url) && !is_wp_error($image_url)){
-            $styles[] = '--citykid-parallax-bg: url('.esc_url($image_url).');';                
-        }
-
-        $footer_image_opacity = get_theme_mod('footer_image_opacity', 100);
-        $styles[] = '--citykid-parallax-opacity: '.($footer_image_opacity/100).';'; 
-
-        $footer_image_position = get_theme_mod('footer_image_position', 'center');
-        $styles[] = '--citykid-parallax-bg-position: '.$footer_image_position.';';
-
-        wp_add_inline_style('citykid-style', '.footer-section{'.implode('', $styles).'}');
-    }
-
-    private function add_partials($wp_customize){
-
-        
-
-        $wp_customize->selective_refresh->add_partial(
-			'footer_social_nav_title',
-			array(
-				'selector'        => '.footer-social-nav-title',
-			)
-		);
-
-        $wp_customize->selective_refresh->add_partial(
-			'footer_bg_color',
-			array(
-				'selector'        => '.footer-section',
-			)
-		);
-
-        $wp_customize->selective_refresh->add_partial(
-			'copyright_bg_color',
-			array(
-				'selector'        => '.copyright-section',
-			)
-		);
-
-        $wp_customize->selective_refresh->add_partial(
-			'nav_menu_locations[footer_social]',
-			array(
-				'selector'        => '.footer-social-nav',
-			)
-		);
-		$wp_customize->selective_refresh->add_partial(
-			'nav_menu_locations[footer]',
-			array(
-				'selector'        => '.footer-nav',
-			)
-		);
-		$wp_customize->selective_refresh->add_partial(
-			'copyright_text',
-			array(
-				'selector'        => '.copyright-text',
-			)
-		);
-		$wp_customize->selective_refresh->add_partial(
-			'footer_logo',
-			array(
-				'selector'        => '.footer-logo',
-			)
-		);
-
-        return $wp_customize;
-    }
     
 }
