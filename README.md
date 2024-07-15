@@ -1,4 +1,4 @@
-# Politixy
+# wordpress-fresh-installation
 
 `composer dumpautoload -o`
 
